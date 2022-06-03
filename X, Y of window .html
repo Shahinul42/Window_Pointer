@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ul {
+            list-style: square;
+        } */
+
+        body {
+            text-align: center;
+        }
+
+        h1 {
+            padding: 10px;
+            background-color: #c4c4c4;
+            color: black;
+            text-align: center;
+            font-size: 45px;
+            word-spacing: 10px;
+            letter-spacing: 14px;
+            font-family: arial;
+            font-weight: bolder;
+            color: #024b02;
+        }
+
+        /* .nav,
+        ul {
+            width: 420px;
+            background-color: #f31a1a;
+            margin: auto;
+            list-style: none;
+            font-size: 25px;
+            font-family: arial;
+
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .ul_1 {
+            width: 200px;
+            float: left;
+            background-color: #e7910ffb;
+            padding: 5px;
+        }
+
+        .ul_2 {
+            width: 200px;
+            float: right;
+            background-color: #89e70ffb;
+            padding: 5px;
+        }
+
+        .test {
+            width: 150px;
+            height: 150px;
+            background-color: #f00;
+        }
+
+        p {
+            text-transform: capitalize;
+            text-align: left;
+            line-height: 22px;
+            letter-spacing: .8px;
+            margin: 25px;
+        }
+
+        p::first-letter {
+            font-size: 90px;
+            color: red;
+            font-weight: bold;
+        }
+
+        button {
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1px;
+            outline: 0;
+            border: 0;
+            padding:10px;
+            position: fixed;
+            top:20%;
+            background-color: #024b02;
+            color:#fff;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        button:active {
+            letter-spacing: .2px;
+            background-color: #024b02;
+            box-shadow: 1px 0 10px #000000;
+            color:#fff;
+            cursor: pointer;
+        } */
+        .Line_Y {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 100%;
+            border: 1px dotted #000;
+        }
+
+        .Line_X {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            border: 1px dotted #000;
+        }
+    </style>
+</head>
+
+<body onresize="test()">
+    <h1>Hello Shahin</h1>
+    <h2>
+        X_velue is:- ( <span class="X_here"></span> px ) <br>
+        Y_velue is:- ( <span class="Y_here"></span> px )
+    </h2>
+
+    <div class="Line_Y"></div>
+    <div class="Line_X"></div>
+
+    <!-- <button>click me</button> -->
+    <!-- <form action="">
+                <label for="">Name :-</label><input type="text" value="Shahin" onclick="focusFunction()" id="name" ><br><br>
+                <label for="">Email :-</label><input type="Email" id="Email"><br><br>
+                <label for="">Country</label>
+                    <select name="" id="select">
+                        <option value="">India</option>
+                        <option value="">Pakistan</option>
+                        <option value="">Bangladesh</option>
+                        <option value="">Sri Lanka</option>
+                        <option value="">Nepal</option>
+                    </select>  <br><br>
+                <input type="submit" onclick="focusFunction()" value="Submit">
+        </form>
+        <br><br> -->
+    <!-- <div class="test"></div>            -->
+    <!-- <button onclick="Open()">Open Window</button>
+    <br><br>
+    <button onclick="Close()">Close Window</button>
+    <br><br>
+    <button onclick="resize()">Resize Window</button> -->
+
+    <!-- <script src="Exarsize.js"></script> -->
+    <script>
+        window.addEventListener("mousemove", (e) => {
+            document.querySelector(".X_here").textContent = e.clientX;
+            document.querySelector(".Y_here").textContent = e.clientY;
+        })
+
+
+        window.addEventListener("mousemove", (e) => {
+            let Line_Y = document.querySelector(".Line_Y");
+            let Line_X = document.querySelector(".Line_X");
+            let X = e.x;
+            let Y = e.y;
+            Line_Y.style.left = X + "px";
+            Line_X.style.top = Y + "px";
+        })
+    </script>
+</body>
+
+</html>
